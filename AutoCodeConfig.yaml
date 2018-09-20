@@ -5,7 +5,7 @@ generators:
 - type: "no_params"
   assertions:
   - "@StatusCode == 200"
-  severity: "Major"
+  severity: null
   database: null
   inactive: false
   matches: []
@@ -13,7 +13,7 @@ generators:
   assertions:
   - "@StatusCode == 200"
   - "@StatusCode != 404"
-  severity: "Major"
+  severity: null
   database: null
   inactive: false
   matches:
@@ -21,6 +21,7 @@ generators:
     value: "1000"
     methods: "Get"
     denyRoles: null
+    allowRoles: null
     pathPatterns: "/**"
     resourceSamples: null
     queryParams: null
@@ -28,14 +29,14 @@ generators:
 - type: "anonymous_invalid"
   assertions:
   - "@StatusCode != 200"
-  severity: "Critical"
+  severity: null
   database: null
   inactive: false
   matches: []
 - type: "auth_invalid"
   assertions:
   - "@StatusCode != 200"
-  severity: "Critical"
+  severity: null
   database: null
   inactive: false
   matches: []
@@ -43,7 +44,7 @@ generators:
   assertions:
   - "@StatusCode != 401"
   - "@StatusCode != 404"
-  severity: "Critical"
+  severity: null
   database: null
   inactive: false
   matches:
@@ -51,6 +52,7 @@ generators:
     value: null
     methods: null
     denyRoles: null
+    allowRoles: null
     pathPatterns: null
     resourceSamples: null
     queryParams: null
@@ -61,7 +63,7 @@ generators:
   - "@StatusCode != 401"
   - "@StatusCode != 404"
   - "@StatusCode != 500"
-  severity: "Critical"
+  severity: null
   database: null
   inactive: false
   matches: []
@@ -69,7 +71,7 @@ generators:
   assertions:
   - "@ResponseTime < 7000"
   - "@StatusCode != 404"
-  severity: "Critical"
+  severity: null
   database:
     name: "MySQL"
     version: "5.7"
@@ -81,14 +83,14 @@ generators:
   - "@StatusCode != 401"
   - "@StatusCode != 404"
   - "@StatusCode != 500"
-  severity: "Critical"
+  severity: null
   database: null
   inactive: false
   matches: []
 - type: "rbac"
   assertions:
   - "@StatusCode == 403"
-  severity: "Critical"
+  severity: null
   database: null
   inactive: false
   matches:
@@ -96,6 +98,7 @@ generators:
     value: null
     methods: "Post, Put, Delete"
     denyRoles: "Writer, Reader"
+    allowRoles: null
     pathPatterns: "/api/v1/orgs/**, /api/v1/accounts/**"
     resourceSamples: null
     queryParams: null
@@ -104,6 +107,7 @@ generators:
     value: null
     methods: "Post, Put, Delete"
     denyRoles: "Reader"
+    allowRoles: null
     pathPatterns: "/api/v1/projects/**, /api/v1/regions/**"
     resourceSamples: null
     queryParams: null
@@ -112,6 +116,7 @@ generators:
     value: null
     methods: "Post, Delete"
     denyRoles: "Collaborator"
+    allowRoles: null
     pathPatterns: "/api/v1/projects/**"
     resourceSamples: null
     queryParams: null
@@ -120,6 +125,7 @@ generators:
     value: null
     methods: "Get, Post, Put, Delete"
     denyRoles: "Other"
+    allowRoles: null
     pathPatterns: "/api/v1/**"
     resourceSamples: null
     queryParams: null
@@ -128,7 +134,7 @@ generators:
   assertions:
   - "@StatusCode != 404"
   - "@StatusCode != 401"
-  severity: "Critical"
+  severity: null
   database: null
   inactive: false
   matches: []
@@ -138,7 +144,7 @@ generators:
   - "@StatusCode != 401"
   - "@StatusCode != 404"
   - "@StatusCode != 500"
-  severity: "Critical"
+  severity: null
   database: null
   inactive: false
   matches: []
@@ -148,7 +154,7 @@ generators:
   - "@StatusCode != 401"
   - "@StatusCode != 404"
   - "@StatusCode != 500"
-  severity: "Critical"
+  severity: null
   database: null
   inactive: false
   matches: []
@@ -158,7 +164,7 @@ generators:
   - "@StatusCode != 401"
   - "@StatusCode != 404"
   - "@StatusCode != 500"
-  severity: "Critical"
+  severity: null
   database: null
   inactive: false
   matches: []
@@ -166,7 +172,7 @@ generators:
   assertions:
   - "@StatusCode != 401"
   - "@StatusCode != 404"
-  severity: "Critical"
+  severity: null
   database: null
   inactive: false
   matches: []
@@ -176,7 +182,7 @@ generators:
   - "@StatusCode != 401"
   - "@StatusCode != 404"
   - "@StatusCode != 500"
-  severity: "Critical"
+  severity: null
   database: null
   inactive: false
   matches: []
